@@ -191,7 +191,7 @@ Ik heb een variabele aangemaakt waarmee ik het jaar selecteer. Vervolgens heb ik
 };
 ```
 
-#### Sorteerfunctie
+#### Stap 3: Sorteerfunctie
 
 Tevens heb ik code geschreven waarmee ik grafiek 1 laat sorteren van oplopend naar aflopend. Dit heb ik gedaan met onderstaande code.
 
@@ -251,7 +251,7 @@ Om dit te laten werken heb ik de volgende codes geschreven
 };
 ```
 
-#### Tooltip
+### Stap 4: Tooltip
 
 Als laatst heb ik op de twee bar charts een tooltip toegepast die wanneer er over en bar gehovert wordt de bijbehorende waardes laat zien in een kleine box. Dit heb ik gedaan met onderstaande codes.
 
