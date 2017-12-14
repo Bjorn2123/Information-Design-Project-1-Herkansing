@@ -36,7 +36,8 @@ var g = svg.append("g")
 var tooltip = d3.select('body').append('div')
     .attr('class', 'tooltip')
     .style('opacity', 0);
-    ```
+
+```
     
 Hierna ben ik mijn data in gaan laden en heb ik deze schoongemaakt.
 
