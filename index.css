@@ -1,0 +1,112 @@
+.axis .domain {
+  display: none;
+}
+
+ .bar {
+    fill: #00a8cf;
+    
+}
+
+.bar:hover {
+    fill: #330066;
+}
+
+.axis--x path {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    border: 1px solid #330066;
+    background-color: #330066;
+ text-align: center;
+}
+
+h1 {
+    font-size: 20px;
+    margin-left: 25px;
+    color: white;
+    font-family: Myriad Pro;
+}
+
+
+h2 {
+    font-size: 15px;
+    margin-top: 20px;
+    color: black;
+    font-family: Myriad Pro;
+}
+
+
+section {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.div4 {
+   margin-left: 150px;
+   
+}
+svg{
+    margin-top: 20px;
+}
+
+
+
+/*
+label {
+    margin-top: 15px;
+    margin-left: 50px;
+    color: white;
+    font-family: Myriad Pro;
+}
+*/
+
+p {
+    text-align: left;
+    width: 500px;
+    margin-left: 20px;
+    font-size: 15px;
+    font-family: Myriad Pro;
+}
+
+text {
+    fill: black;
+}
+
+div.tooltip {
+ position: absolute;
+ text-align: center;
+ width: 140px;
+ height: 32px;
+ padding: 5px;
+ font: 12px sans-serif;
+ background: lightsteelblue;
+ border: 0px;
+ border-radius: 8px;
+ pointer-events: none;
+    
+}
+
+
+circle {
+  fill: rgb(31, 119, 180);
+  fill-opacity: .25;
+  stroke: rgb(31, 119, 180);
+  stroke-width: 1px;
+}
+
+.leaf circle {
+  fill: #ff7f0e;
+  fill-opacity: 1;
+}
+
+.textcircle{
+  font: 10px sans-serif;
+  text-anchor: middle;
+}

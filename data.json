@@ -1,0 +1,236 @@
+{
+ "name": "Totaal",
+ "children": [
+    {
+      "name": "Noord Holland",
+            "children": [
+                {
+                    "name": "Amsterdam",
+                    "size": 8600
+                },
+                {
+                    "name": "Haarlem",
+                    "size": 2500
+                },
+                {
+                    "name": "Hilversum",
+                    "size": 1700
+                },
+                {
+                    "name": "Alkmaar",
+                    "size": 1600
+                },
+                {
+                    "name": "Den Helder",
+                    "size": 970
+                },
+                {
+                    "name": "Naarden",
+                    "size": 380
+                },
+                {
+                    "name": "Uitgeest",
+                    "size": 170
+                }
+     ]
+    },
+       {
+      "name": "Zuid Holland",
+            "children": [
+                {
+                    "name": "Rotterdam",
+                    "size": 9400
+                },
+                {
+                    "name": "Den Haag",
+                    "size": 7400
+                },
+                {
+                    "name": "Leiden",
+                    "size": 1500
+                },
+                {
+                    "name": "Delft",
+                    "size": 1400
+                },
+                {
+                    "name": "Schiedam",
+                    "size": 1200
+                },
+                {
+                    "name": "Gouda",
+                    "size": 1200
+                },
+                {
+                    "name": "Barendrecht",
+                    "size": 170
+                }
+     ]
+    },
+     {
+      "name": "Groningen",
+            "children": [
+                {
+                    "name": "Groningen",
+                    "size": 780
+                },
+                {
+                    "name": "Haren",
+                    "size": 550
+                },
+                {
+                    "name": "Bedum",
+                    "size": 170
+                },
+                {
+                    "name": "De Marne",
+                    "size": 190
+                },
+                {
+                    "name": "Leek",
+                    "size": 350
+                },
+                {
+                    "name": "Veendam",
+                    "size": 520
+                },
+                {
+                    "name": "Winsum",
+                    "size": 230
+                }
+     ]
+    },
+      {
+      "name": "Overijsel",
+            "children": [
+                {
+                    "name": "Enschede",
+                    "size": 2300
+                },
+                {
+                    "name": "Zwolle",
+                    "size": 1700
+                },
+                {
+                    "name": "Deventer",
+                    "size": 1600
+                },
+                {
+                    "name": "Hengelo",
+                    "size": 1400
+                },
+                {
+                    "name": "Almelo",
+                    "size": 1100
+                },
+                {
+                    "name": "Kampen",
+                    "size": 740
+                },
+                {
+                    "name": "Oldenzaal",
+                    "size": 560
+                }
+     ]
+    },
+         {
+      "name": "Utrecht",
+            "children": [
+                {
+                    "name": "Utrecht",
+                    "size": 3100
+                },
+                {
+                    "name": "Amersfoort",
+                    "size": 2000
+                },
+                {
+                    "name": "Zeist",
+                    "size": 1300
+                },
+                {
+                    "name": "De Bilt",
+                    "size": 1100
+                },
+                {
+                    "name": "Utrechtse Heuvelrug",
+                    "size": 1200
+                },
+                {
+                    "name": "Stichtse Vecht",
+                    "size": 970
+                },
+                {
+                    "name": "Soest",
+                    "size": 920
+                }
+     ]
+    },
+     {
+      "name": "Noord Brabant",
+            "children": [
+                {
+                    "name": "Eindhoven",
+                    "size": 3600
+                },
+                {
+                    "name": "Tilburg",
+                    "size": 2900
+                },
+                {
+                    "name": "Breda",
+                    "size": 2900
+                },
+                {
+                    "name": "Den Bosch",
+                    "size": 2100
+                },
+                {
+                    "name": "Oss",
+                    "size": 1400
+                },
+                {
+                    "name": "Roosendaal",
+                    "size": 1300
+                },
+                {
+                    "name": "Helmond",
+                    "size": 1200
+                }
+     ]
+    },
+     {
+      "name": "Limburg",
+            "children": [
+                {
+                    "name": "Beek",
+                    "size": 330
+                },
+                {
+                    "name": "Beesel",
+                    "size": 230
+                },
+                {
+                    "name": "Heerlen",
+                    "size": 1800
+                },
+                {
+                    "name": "Maastricht",
+                    "size": 2300
+                },
+                {
+                    "name": "Landgraaf",
+                    "size": 690
+                },
+                {
+                    "name": "Onderbanken",
+                    "size": 180
+                },
+                {
+                    "name": "Bergen",
+                    "size": 230
+                }
+     ]
+    }
+       ]
+    }
