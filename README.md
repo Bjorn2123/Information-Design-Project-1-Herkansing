@@ -37,3 +37,90 @@ var tooltip = d3.select('body').append('div')
     .attr('class', 'tooltip')
     .style('opacity', 0);
     ```
+    
+Hierna ben ik mijn data in gaan laden en heb ik deze schoongemaakt.
+
+```js
+d3.text('index.csv').get(onload);
+
+function onload(err, doc) {
+
+    if (err) {
+        throw err
+
+    }
+
+    var header = doc.indexOf('Perioden'),
+        footer = doc.indexOf('Centraal Bureau voor de Statistiek') - 2,
+        end = doc.indexOf('\n', header);
+    doc = doc.substring(end, footer).trim();
+
+    var data = d3.csvParseRows(doc, map).slice(10, 21);
+
+    function map(d) {
+        return {
+            Perioden: Number(d[0]),
+            Totaal: Number(d[1]) + Number(d[3]) + Number(d[2]) + Number(d[4]),
+            Mannen: Number(d[1]) + Number(d[3]),
+            Vrouwen: Number(d[2]) + Number(d[4])
+        }
+
+    }
+```
+
+Vervolgens ben ik domeinen gaan maken voor X en de Y as en heb ik deze assen plus de bijbehorende bars gemaakt.
+
+```js
+
+    x.domain(data.map(function (d) {
+        return d.Perioden;
+    }));
+    y.domain([0, 12000]);
+
+    g.append("g")
+        .attr("class", "axis axis--x")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x));
+
+    g.append("g")
+        .attr("class", "axis axis--y")
+        .call(d3.axisLeft(y).ticks(10))
+        .append("text")
+        .attr("y", 6)
+        .attr("dy", "-0.20em")
+        .attr("dx", "0.20em")
+        .attr("fill", "#000")
+        .attr("font-weight", "bold")
+        .attr("text-anchor", "start")
+        .text("Aantal overledenen");
+
+
+
+    g.selectAll(".bar")
+        .data(data)
+        .enter().append("rect")
+        .attr("class", "bar")
+        .attr("x", function (d) {
+            return x(d.Perioden);
+        })
+        .attr("y", function (d) {
+            return y(d.Totaal);
+        })
+        .attr("width", x.bandwidth())
+        .attr("height", function (d) {
+            return height - y(d.Totaal);
+        })
+        .on('mousemove', function (d) {
+            tooltip.transition()
+                .duration(200)
+                .style('opacity', .9)
+            tooltip.html((d.Totaal + '<br>' + ' Overledenen'))
+                .style('left', (d3.event.pageX) + 'px')
+                .style('top', (d3.event.pageY - 28) + 'px')
+        })
+        .on('mouseout', function (d) {
+            tooltip.transition()
+                .duration(500)
+                .style('opacity', 0);
+        });
+```
