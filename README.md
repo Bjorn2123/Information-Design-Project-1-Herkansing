@@ -128,13 +128,13 @@ Vervolgens ben ik domeinen gaan maken voor X en de Y as en heb ik deze assen plu
 
 
 Voor het maken van grafiek 2 en 3 heb ik de codes geschreven op dezelfde manier als die van grafiek 1. Uitgebreide uitleg over deze codes staan gecomment in mijn js. file
-Ik heb voor grafiek 3 gekozen voor [Circle Packing](https://bl.ocks.org/mbostock/4063530). Grafiek 2 heb ik helemaal zelf gemaakt metg grafiek 1 als voorbeeld. 
+Ik heb voor grafiek 3 gekozen voor [Circle Packing](https://bl.ocks.org/mbostock/4063530). Grafiek 2 heb ik helemaal zelf gemaakt met grafiek 1 als voorbeeld. 
 
 ### Interactie
 
-Om mijn verhaal te kunnen vertellen door middel van de datavisualitaties heb ik interactie toegevoegd. Deze interactie bestaat uit het klikken om een bar uit grafiek 1 die meerdere data laat zien in grafiek 2 voor het aangeklikte jaar. Dit heb ik gedaan door middel van onderstaande codes.
+Om mijn verhaal te kunnen vertellen door middel van de datavisualitaties heb ik interactie toegevoegd. Deze interactie bestaat uit het klikken op een bar uit grafiek 1 die meerdere data laat zien in grafiek 2 voor het aangeklikte jaar. Dit heb ik gedaan door middel van onderstaande codes.
 
-Ik heb hier een on click aan alle rectangles met class bar uti grafiek 1 gegeven die na het klikken function Onchange in z'n werk laat gaan. 
+Ik heb hier een onclick aan alle rectangles met class bar uit grafiek 1 gegeven die na het klikken function Onchange in z'n werk laat gaan. 
 
 Ik heb een variabele aangemaakt waarmee ik het jaar selecteer. Vervolgens heb ik een if else statement gemaakt waarmee ik de interactie laat werken. Zie codes
 
