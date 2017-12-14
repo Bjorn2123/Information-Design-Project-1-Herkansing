@@ -8,7 +8,7 @@ Bij het vak Research for Data heb ik als onderwerp dementie gekregen. Ik heb erv
 
 ### Stap 1: Grafiek bouwen
 
-#### Grafiek 1
+#### Grafiek 1 (voor grafiek 2 heb ik dit op dezelfde manier gedaan)
 
 Om het aantal mensen dat overleden is aan dementie tussen 2006 en 2016 te laten zien heb ik voor een [Bar Chart](https://bl.ocks.org/mbostock/3885304) van Mike Bostock.
 
@@ -95,8 +95,6 @@ Vervolgens ben ik domeinen gaan maken voor X en de Y as en heb ik deze assen plu
         .attr("text-anchor", "start")
         .text("Aantal overledenen");
 
-
-
     g.selectAll(".bar")
         .data(data)
         .enter().append("rect")
@@ -125,3 +123,72 @@ Vervolgens ben ik domeinen gaan maken voor X en de Y as en heb ik deze assen plu
                 .style('opacity', 0);
         });
 ```
+
+#### Grafiek 2 & 3
+
+
+Voor het maken van grafiek 2 en 3 heb ik de codes geschreven op dezelfde manier als die van grafiek 1. Uitgebreide uitleg over deze codes staan gecomment in mijn js. file
+Ik heb voor grafiek 3 gekozen voor [Circle Packing](https://bl.ocks.org/mbostock/4063530). Grafiek 2 heb ik helemaal zelf gemaakt metg grafiek 1 als voorbeeld. 
+
+### Interactie
+
+Om mijn verhaal te kunnen vertellen door middel van de datavisualitaties heb ik interactie toegevoegd. Deze interactie bestaat uit het klikken om een bar uit grafiek 1 die meerdere data laat zien in grafiek 2 voor het aangeklikte jaar. Dit heb ik gedaan door middel van onderstaande codes.
+
+Ik heb hier een on click aan alle rectangles met class bar uti grafiek 1 gegeven die na het klikken function Onchange in z'n werk laat gaan. 
+
+Ik heb een variabele aangemaakt waarmee ik het jaar selecteer. Vervolgens heb ik een if else statement gemaakt waarmee ik de interactie laat werken. Zie codes
+
+```js
+   d3.selectAll(".bar").on('click', onChange);
+
+    function onChange(e) {
+        var selectedYear = e.Perioden
+
+        if (selectedYear < 2014) {
+            window.alert("Van " + selectedYear + " is helaas geen data van beschikbaar");
+        } else {
+            var dataUpdate = dataRight.filter(function (d) {
+                return Number(d.Perioden) === Number(selectedYear);
+            });
+            console.log(dataUpdate)
+
+            var barMannen = svgRight.selectAll(".barMan");
+
+            barMannen.data(dataUpdate).transition().duration(750).ease(d3.easeBounce)
+                .attr("class", "barMan")
+                .attr("width", (x0.bandwidth() - 20) / 2)
+                .attr("y", function (d) {
+                    return yRight(d.Mannen);
+                })
+                .attr("height", function (d) {
+                    return heightRight - yRight(d.Mannen) + 20;
+                })
+                .attr("x", function (d) {
+                    return marginRight.left + x0(d.Risico) + 9;
+                })
+                .attr("fill", "#00a8cf");
+
+
+            var barVrouwen = svgRight.selectAll(".barVrouw");
+
+            barVrouwen.data(dataUpdate).transition().duration(750).ease(d3.easeBounce)
+                .attr("class", "barVrouw")
+                .attr("width", (x0.bandwidth() - 20) / 2)
+                .attr("y", function (d) {
+                    return yRight(d.Vrouwen);
+                })
+                .attr("height", function (d) {
+                    return heightRight - yRight(d.Vrouwen) + 20;
+                })
+                .attr("x", function (d) {
+                    return marginRight.left + x0(d.Risico) + 11 + ((x0.bandwidth() - 20) / 2);
+                })
+                .attr("fill", "#0086a5");
+
+        }
+    }
+
+};
+```
+
+
