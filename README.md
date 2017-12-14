@@ -191,7 +191,7 @@ Ik heb een variabele aangemaakt waarmee ik het jaar selecteer. Vervolgens heb ik
 };
 ```
 
-#### Stap 3: Sorteerfunctie
+### Stap 3: Sorteerfunctie
 
 Tevens heb ik code geschreven waarmee ik grafiek 1 laat sorteren van oplopend naar aflopend. Dit heb ik gedaan met onderstaande code.
 
